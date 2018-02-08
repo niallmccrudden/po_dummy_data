@@ -1,0 +1,12 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Testing\n"
+
+msgid "IBAN"
+msgstr ""
+
+msgid "SWIFT/BIC"
+msgstr ""
+
+msgid "More test data"
+msgstr ""

@@ -1,0 +1,12 @@
+{
+    "name": "vagrant/po_manipulation",
+    "authors": [
+        {
+            "name": "Niall McCrudden",
+            "email": "niallmccrudden@currencyfair.com"
+        }
+    ],
+    "require": {
+        "gettext/gettext": "^4.4"
+    }
+}
