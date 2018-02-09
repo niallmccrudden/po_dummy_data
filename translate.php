@@ -9,14 +9,15 @@ $outputFile = 'example_output_fr.po';
 $translationPrefix = 'FR';
 
 if (!is_file($sourceFile)) {
-	exit(sprintf('Input source file %s does not exist', $sourceFile) . PHP_EOL);
+    exit(sprintf('Input source file %s does not exist', $sourceFile) . PHP_EOL);
 }
 
 //import from the source .po file:
 $translations = Translations::fromPoFile($sourceFile);
 
 foreach($translations as $key => $value) {
-	$value->setTranslation(sprintf('[%s] %s', $translationPrefix, $value->getOriginal()));
+    $translation = empty($value->getTranslation()) ? $value->getOriginal() : $value->getTranslation();
+    $value->setTranslation(sprintf('[%s] %s', $translationPrefix, $translation));
 }
 
 // output the PO File
